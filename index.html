@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task</title>
+    <link href="css/main.css" rel="stylesheet">      
+</head>
+<body>
+
+<section class="main">
+
+    <div class="options">
+
+        <!-- <input type="file" id="bg-loader" accept="image/*"> -->
+
+        <input type="text" id="bg-loader-url">
+
+        <input type="checkbox" id="rect-mode"> Rectangle constructor mode <br>
+
+        <div class="options-rectangle">
+            <input type="number" id="stroke-width" value="1"> Border width <br>
+            <input type="color" id="stroke-color"> Border color 
+        </div>   
+
+        <input type="button" id="delete" value="Delete selected items"></input>
+        <input type="button" id="save" value="Download image"></input>     
+
+    </div>
+
+    <!-- Canvas placeholder -->
+    <div id="canvas-drop-area">
+        <canvas id="canvas" width="500px" height="500px"></canvas>
+    </div>  
+
+</section>
+
+<!-- libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>  
+<script src="js/lib/fabric.min.js"></script>
+<!-- app -->
+<script src="js/load.js"></script> 
+<script src="js/scale.js"></script> 
+<script src="js/rect.js"></script> 
+<script src="js/options.js"></script>
+
+</body>
+</html>
