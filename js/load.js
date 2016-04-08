@@ -2,8 +2,22 @@ $(document).ready( function() {
 	var canvas = new fabric.Canvas('canvas')
     window.canvas = canvas;
 
-	$('#bg-loader-url').on('input', function(){
-        canvas.setBackgroundImage($('#bg-loader-url').val());   
+	
+
+    var img = new Image();
+    img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+    img.src = "";
+    img.onload = function(){
+      canvas.setBackgroundImage(new fabric.Image(img, {
+        originX: 'left',
+        originY: 'top',
+        left: 0,
+        top: 0
+      }), canvas.renderAll.bind(canvas));
+    };
+
+    $('#bg-loader-url').on('input', function(){
+       img.src = $('#bg-loader-url').val();   
     });
 
 
