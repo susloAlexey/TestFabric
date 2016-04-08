@@ -1,17 +1,10 @@
 $(document).ready( function() {
-	var canvas = window.canvas = new fabric.Canvas('canvas');
+	var canvas = new fabric.Canvas('canvas')
+    window.canvas = canvas;
 
-	$('#bg-loader-url').on('input', function(){  
-        canvas.setBackgroundImage($('#bg-loader-url').val(), canvas.renderAll.bind(canvas), {
-            originX: 'left',
-            originY: 'top',
-            left: 0,
-            top: 0,
-            crossOrigin: 'anonymous'
-        });
+	$('#bg-loader-url').on('input', function(){
+        canvas.setBackgroundImage($('#bg-loader-url').val());   
     });
-
-	// img.src = "http://cs8.pikabu.ru/post_img/2016/04/08/10/1460136759189063615.jpg";
 
 
     // $('#bg-loader').change( function (e) {
